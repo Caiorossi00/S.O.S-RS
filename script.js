@@ -1,46 +1,45 @@
 const instituicoes = [
   {
-    foto: "./assets/alimentos.webp",
-    categoria: "Alimentos",
-    nome: "Lorem ipsum",
-    responsavel: "Caio Rossi",
-    sinopse:
-      "Precisamos urgentemente de doações de alimentos não perecíveis, água potável e produtos de higiene pessoal",
-    telefone: "(51) 1234-5678",
-    endereco: "Rua Lorem Ipsum, 999, Jaguarão.",
-    pix: "Caio_rossi56@hotmail.com",
+    foto: "./assets/carros.jpg",
+    categoria: "Água",
+    nome: "Carros Antigos - Jaguarão",
+    responsavel: "Zarte",
+    sinopse: "Precisamos urgentemente de doações de água potável",
+    telefone: "(51) 9999-9999",
+    endereco: "XV de novembro, 1625 e JR Veículos",
+    pix: "",
   },
   {
     foto: "./assets/roupas.webp",
     categoria: "Roupas",
-    nome: "Lorem ipsum",
+    nome: "Exemplo",
     responsavel: "Caio Rossi",
     sinopse:
       "Precisamos de doações de roupas limpas e em bom estado. Roupas de cama, roupas infantis, agasalhos, calçados e cobertores.",
     telefone: "(51) 1234-5678",
-    endereco: "Rua Lorem Ipsum, 999, Jaguarão.",
+    endereco: "Rua Exemplo, 999, Jaguarão.",
     pix: "Caio_rossi56@hotmail.com",
   },
   {
     foto: "./assets/dinheiro.jpg",
     categoria: "Dinheiro",
-    nome: "Lorem ipsum",
+    nome: "Exemplo",
     responsavel: "Caio Rossi",
     sinopse:
       "Estamos recolhendo doações em dinheiro ou pix que serão convertidas em compras de itens necessários para ajudar a população",
     telefone: "(51) 1234-5678",
-    endereco: "Rua Lorem Ipsum, 999, Jaguarão.",
+    endereco: "Rua Exemplo, 999, Jaguarão.",
     pix: "Caio_rossi56@hotmail.com",
   },
   {
     foto: "./assets/animais.jpg",
     categoria: "Animais",
-    nome: "Lorem ipsum",
+    nome: "Exemplo",
     responsavel: "Caio Rossi",
     sinopse:
       "Estamos recolhendo doações em dinheiro ou pix que serão convertidas em compras de itens necessários para ajudar a população",
     telefone: "(51) 1234-5678",
-    endereco: "Rua Lorem Ipsum, 999, Jaguarão.",
+    endereco: "Rua Exemplo, 999, Jaguarão.",
     pix: "Caio_rossi56@hotmail.com",
   },
 ];
@@ -96,13 +95,17 @@ function criarCards() {
 
     const pixItem = document.createElement("div");
     pixItem.classList.add("contact-item");
-    const imgpix = document.createElement("img");
-    imgpix.src =
-      "https://user-images.githubusercontent.com/741969/99538099-3b7a5d00-298b-11eb-9f4f-c3d0cd4a5280.png";
-    imgpix.alt = "Ícone de Pix";
+
+    if (instituicao.pix !== "") {
+      const imgpix = document.createElement("img");
+      imgpix.src =
+        "https://user-images.githubusercontent.com/741969/99538099-3b7a5d00-298b-11eb-9f4f-c3d0cd4a5280.png";
+      imgpix.alt = "Ícone de Pix";
+      pixItem.appendChild(imgpix);
+    }
+
     const pix = document.createElement("p");
     pix.textContent = instituicao.pix;
-    pixItem.appendChild(imgpix);
     pixItem.appendChild(pix);
 
     contactInfo.appendChild(telefoneItem);
