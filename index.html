@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>S.O.S RS - Jaguarão</title>
+    <link rel="icon" href="./assets/favicon.png" type="image/png" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;700&display=swap"
+    />
+    <script
+      src="https://kit.fontawesome.com/d3fb1e03fb.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <img src="./assets/rs.logo.avif" alt="Logo" />
+      </div>
+      <nav class="nav-links">
+        <ul>
+          <li><a href="#QAJD">Quem ajudar?</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#cadastro">Cadastro</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="hero-content">
+          <h1 class="sos-text">S.O.S RS</h1>
+          <h2>A sua ajuda é importante</h2>
+          <p>
+            Um guia virtual do município de Jaguarão para encontrar informações
+            sobre onde doar, como ajudar e fazer parte dessa corrente solidária
+            em apoio ao nosso estado durante esta emergência. Servirão nossas
+            façanhas, de modelo à toda terra.
+          </p>
+          <a href="#QAJD" class="btn">Quem eu posso ajudar?</a>
+        </div>
+      </section>
+
+      <section class="help-section" id="QAJD">
+        <div class="help-content">
+          <h1>É hora de ajudar quem precisa de você</h1>
+          <div class="container-cards"></div>
+        </div>
+      </section>
+
+      <section class="project-section" id="sobre">
+        <div class="project-content">
+          <h1>O que é esse projeto?</h1>
+          <p>
+            Este projeto tem o intuito de atuar como um ponto central de
+            informações sobre as iniciativas e indivíduos de Jaguarão que estão
+            se mobilizando para ajudar nas consequências das enchentes que
+            afetam todo o estado. Aqui você encontrará detalhes sobre as
+            diversas ações em andamento, seus propósitos, números de contato e
+            mais informações essenciais.
+            <br /><br />Você pode contribuir fornecendo informações para manter
+            o site sempre atualizado e, acima de tudo, compartilhando e
+            divulgando nas redes sociais. Sua participação é fundamental para
+            ampliar o alcance das iniciativas, conectar mais pessoas dispostas a
+            ajudar e fortalecer a rede de solidariedade.
+            <br />
+            <br />
+            Você pode entrar em contato diretamente comigo pelo Instagram,
+            Facebook ou WhatsApp. Sua colaboração é muito bem-vinda e essencial
+            para fortalecer nossa iniciativa e ampliar nosso impacto positivo.
+          </p>
+          <div class="socials-content">
+            <div>
+              <h2>Minhas Redes Sociais</h2>
+              <div class="social-icons">
+                <a
+                  href="https://www.instagram.com/caiorossi.dev"
+                  target="_blank"
+                  ><i class="fa fa-instagram fa-icon"></i
+                ></a>
+                <a href="https://wa.me/5553984158694" target="_blank"
+                  ><i class="fa fa-whatsapp fa-icon"></i
+                ></a>
+                <a
+                  href="https://www.facebook.com/caio.rossi.35912"
+                  target="_blank"
+                  ><i class="fa fa-facebook fa-icon"></i
+                ></a>
+              </div>
+            </div>
+            <div>
+              <h2 style="margin-bottom: 15px">Apoiadores</h2>
+              <div class="supporters">
+                <img
+                  src="https://scontent.fmvd4-1.fna.fbcdn.net/v/t39.30808-6/273328434_336022338534617_6184724776762801753_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=JND6Bo5Rx6UQ7kNvgHBWAp2&_nc_oc=Adizl3U-oK-SkC7B76DgD-TXCfdavJbTMeCe47p5Ec8i6CUJyFi9xj-4gR7FQEFko30&_nc_ht=scontent.fmvd4-1.fna&cb_e2o_trans=t&oh=00_AfDYeWDhxjmSxYlDh2R1zG0sVQo2y-mvUMUsBZ5s6dpiAA&oe=663FBE4E"
+                  alt="Apoiador 1"
+                />
+                <img
+                  src="https://img.elo7.com.br/product/zoom/3D8223A/logomarca-de-design-makeup.jpg"
+                  alt="Apoiador 2"
+                />
+                <img
+                  src="https://assets.turbologo.ru/blog/ru/2021/11/12081137/Chanel_logo.png"
+                  alt="Apoiador 3"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="register-section" id="cadastro">
+        <div class="container-register">
+          <div class="register-content">
+            <h1>Quer cadastrar suas informações no site?</h1>
+            <p>
+              Se você deseja cadastrar suas informações no site, preencha o
+              formulário abaixo com os detalhes necessários. Estamos reunindo
+              dados sobre ações e projetos em Jaguarão para ajudar nas
+              consequências das enchentes.
+            </p>
+          </div>
+          <form id="cadastroForm">
+            <label for="nome">Nome:</label><br />
+            <input type="text" id="nome" name="nome" required /><br /><br />
+
+            <label for="nomeProjeto">Nome do Projeto:</label><br />
+            <input
+              type="text"
+              id="nomeProjeto"
+              name="nomeProjeto"
+              required
+            /><br /><br />
+
+            <label for="sedeFisica">Sede Física (opcional):</label><br />
+            <input type="text" id="sedeFisica" name="sedeFisica" />
+            <br /><br />
+
+            <label for="papelAcao">Qual papel a ação vai cumprir:</label><br />
+            <input type="text" id="papelAcao" name="papelAcao" required />
+            <br /><br />
+
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#QAJD">Quem ajudar?</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#cadastro">Cadastro</a></li>
+        </ul>
+      </nav>
+      <p>
+        <i
+          >"Não perca mais tempo discutindo sobre o que um bom homem deve ser.
+          Seja um."</i
+        ><br />
+        - Marco Aurélio
+      </p>
+      <p>Desenvolvido por Caio Rossi</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
