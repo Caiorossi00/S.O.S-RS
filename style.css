@@ -135,6 +135,7 @@ body {
   border-radius: 10px;
   width: 400px;
   padding: 20px;
+  height: fit-content;
 }
 
 .card img {
@@ -321,4 +322,9 @@ footer p {
 
 #cadastroForm button:hover {
   background-color: black;
+}
+
+.contact-button a {
+  text-decoration: none;
+  color: white;
 }

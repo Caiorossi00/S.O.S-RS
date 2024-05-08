@@ -1,46 +1,51 @@
 const instituicoes = [
   {
+    foto: "./assets/mf.jpg",
+    categoria: "Alimentos e Itens Básicos",
+    nome: "MF Ajuda",
+    responsavel: "MF Fit Center",
+    sinopse:
+      "Precisamos de doações de alimentos, roupas de cama, roupas, calçados, toalhas, brinquedos ou doações em dinheiro por meio do pix, os itens podem ser entregues no endereço listado abaixo ou entre em contato para que busquemos os itens no seu endereço",
+    telefone: "(53) 984272083",
+    endereco: "Júlio de Castilhos, 1800.",
+    pix: "53 984781336",
+  },
+
+  {
+    foto: "./assets/ideia.jpg",
+    categoria: "Leite e produtos de higiene",
+    nome: "Troca Solidária",
+    responsavel: "Equipe Ideia Gráfica",
+    sinopse:
+      "Estamos recolhendo doações de caixas de leite e produtos de higiene, você pode entregar os itens no endereço listado abaixo",
+    telefone: "(53) 984322639",
+    endereco: "Júlio de Castilhos, 65",
+    pix: "53 981300010",
+  },
+
+  {
+    foto: "./assets/ctg.jpg",
+    categoria: "Itens básicos",
+    nome: "Todos por todos ",
+    responsavel: "CTG Rincão da Fronteira",
+    sinopse:
+      "Estamos recolhendo doações de kits de higiene pessoal, kits de itens para bebês, roupas, colchões, travesseiros e outros itens básicos, busque informações no instagram @ctgrincao",
+    telefone: "",
+    endereco:
+      "CTG Lanceiros da Querência, Rotary Club Leste, CTG Rincão da fronteira, Farmácia Herbafarma, Águia monitoramento, Arena BH e muito mais",
+    pix: "93.854.644.0001-28",
+    instagram: "instagram.com/ctgrincao/",
+  },
+  {
     foto: "./assets/carros.jpg",
     categoria: "Água",
-    nome: "Carros Antigos - Jaguarão",
-    responsavel: "Zarte",
-    sinopse: "Precisamos urgentemente de doações de água potável",
-    telefone: "(51) 9999-9999",
+    nome: "Arrecadação Jaguar Car",
+    responsavel: "Grupo Jaguar Car Antigos",
+    sinopse:
+      "Precisamos urgentemente de doações de água potável, entre em contato com o número listado abaixo",
+    telefone: "53 984216403",
     endereco: "XV de novembro, 1625 e JR Veículos",
     pix: "",
-  },
-  {
-    foto: "./assets/roupas.webp",
-    categoria: "Roupas",
-    nome: "Exemplo",
-    responsavel: "Caio Rossi",
-    sinopse:
-      "Precisamos de doações de roupas limpas e em bom estado. Roupas de cama, roupas infantis, agasalhos, calçados e cobertores.",
-    telefone: "(51) 1234-5678",
-    endereco: "Rua Exemplo, 999, Jaguarão.",
-    pix: "Caio_rossi56@hotmail.com",
-  },
-  {
-    foto: "./assets/dinheiro.jpg",
-    categoria: "Dinheiro",
-    nome: "Exemplo",
-    responsavel: "Caio Rossi",
-    sinopse:
-      "Estamos recolhendo doações em dinheiro ou pix que serão convertidas em compras de itens necessários para ajudar a população",
-    telefone: "(51) 1234-5678",
-    endereco: "Rua Exemplo, 999, Jaguarão.",
-    pix: "Caio_rossi56@hotmail.com",
-  },
-  {
-    foto: "./assets/animais.jpg",
-    categoria: "Animais",
-    nome: "Exemplo",
-    responsavel: "Caio Rossi",
-    sinopse:
-      "Estamos recolhendo doações em dinheiro ou pix que serão convertidas em compras de itens necessários para ajudar a população",
-    telefone: "(51) 1234-5678",
-    endereco: "Rua Exemplo, 999, Jaguarão.",
-    pix: "Caio_rossi56@hotmail.com",
   },
 ];
 
@@ -74,13 +79,17 @@ function criarCards() {
 
     const telefoneItem = document.createElement("div");
     telefoneItem.classList.add("contact-item");
-    const imgTelefone = document.createElement("img");
-    imgTelefone.src =
-      "https://cdn2.iconfinder.com/data/icons/font-awesome/1792/phone-512.png";
-    imgTelefone.alt = "Ícone de telefone";
+
+    if (instituicao.telefone !== "") {
+      const imgTelefone = document.createElement("img");
+      imgTelefone.src =
+        "https://cdn2.iconfinder.com/data/icons/font-awesome/1792/phone-512.png";
+      imgTelefone.alt = "Ícone de telefone";
+      telefoneItem.appendChild(imgTelefone);
+    }
+
     const telefone = document.createElement("p");
     telefone.textContent = instituicao.telefone;
-    telefoneItem.appendChild(imgTelefone);
     telefoneItem.appendChild(telefone);
 
     const enderecoItem = document.createElement("div");
@@ -114,11 +123,19 @@ function criarCards() {
 
     const button = document.createElement("button");
     button.classList.add("contact-button");
-    button.textContent = "Ajudar";
 
-    button.addEventListener("click", function () {
-      enviarMensagemWhatsapp(instituicao.telefone);
-    });
+    if (instituicao.telefone !== "") {
+      button.textContent = "Ajudar";
+      button.addEventListener("click", function () {
+        enviarMensagemWhatsapp(instituicao.telefone);
+      });
+    } else {
+      const anchor = document.createElement("a");
+      anchor.href = `https://${instituicao.instagram}`;
+      anchor.target = "_blank";
+      anchor.textContent = "Ajudar";
+      button.appendChild(anchor);
+    }
 
     card.appendChild(img);
     card.appendChild(categoria);
