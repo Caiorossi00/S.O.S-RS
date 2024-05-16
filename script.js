@@ -47,6 +47,17 @@ const instituicoes = [
     endereco: "XV de novembro, 1625 e JR Veículos",
     pix: "",
   },
+  {
+    foto: "./assets/gigi.jpg",
+    categoria: "Itens Básicos",
+    nome: "Campanha de Arrecadação",
+    responsavel: "Tabacaria 27 Gigi",
+    sinopse:
+      "Precisamos de doações de água, alimentos não perecíveis, cobertores, roupa de cama e toalhas, produtos de higiene pessoal e material de limpeza, as doações serão recebidas no endereço  abaixo das 08 às 16h",
+    telefone: "53 999612013",
+    endereco: "Rua 27 de Janeiro, 1093",
+    pix: "",
+  },
 ];
 
 function criarCards() {
